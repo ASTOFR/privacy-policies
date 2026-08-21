@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Analytics Terms</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --surface: #ffffff;
+    --border: #e4e1d8;
+    --text: #1c1b18;
+    --text-dim: #6b6558;
+    --accent: #b5762c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16140f; --surface: #1e1b15; --border: #332e23;
+      --text: #ece7db; --text-dim: #a99f8c; --accent: #e0a355;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16140f; --surface: #1e1b15; --border: #332e23;
+    --text: #ece7db; --text-dim: #a99f8c; --accent: #e0a355;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 72px 24px 100px; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12.5px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
+  }
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif; font-size: 34px; font-weight: 600;
+    letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance;
+  }
+  .updated { color: var(--text-dim); font-size: 14px; margin: 0 0 42px; }
+  h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 20px; font-weight: 600; margin: 42px 0 12px; }
+  p, li { font-size: 15.5px; color: var(--text); }
+  p { margin: 0 0 14px; max-width: 62ch; }
+  ul { padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 8px; max-width: 60ch; }
+  strong { font-weight: 600; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; margin: 20px 0; }
+  .card p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  .contact { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Studio Analytics — Terms</p>
+  <h1>Terms of Service</h1>
+  <p class="updated">Effective 21 August 2026</p>
+
+  <p>Studio Analytics is a private tool built and operated by a single person to track
+  the performance of two of their own TikTok accounts, <strong>@UncoveredEmpires</strong>
+  and <strong>@SiliconHours</strong>, alongside their YouTube and Instagram statistics.
+  It connects to TikTok through the official Login Kit, in Sandbox mode, restricted to
+  those two accounts.</p>
+
+  <div class="card">
+    <p>This is not a public service. There is no sign-up, no other account can connect
+    to it, and it is never distributed to anyone outside its operator.</p>
+  </div>
+
+  <h2>What the tool does</h2>
+  <ul>
+    <li>Reads follower count, likes count, video count and public video metrics for
+    the two authorized accounts.</li>
+    <li>Stores those numbers over time in a local database, to chart growth.</li>
+    <li>Never posts, edits, deletes, or otherwise acts on either account — read access
+    only.</li>
+  </ul>
+
+  <h2>What it doesn't do</h2>
+  <ul>
+    <li>It does not access any account other than the two listed above.</li>
+    <li>It does not share data with advertisers, data brokers, or any third party.</li>
+    <li>It does not run on any server reachable from outside the operator's own
+    computer.</li>
+  </ul>
+
+  <h2>Ending access</h2>
+  <p>Access can be revoked at any time from TikTok's own <strong>Settings → Security →
+  Manage apps</strong> screen, on either account. Revoking access stops all reads
+  immediately; nothing further is required here.</p>
+
+  <p class="contact">Studio Analytics · operated by the account owner of
+  @UncoveredEmpires and @SiliconHours.</p>
+</div>
+</body>
+</html>

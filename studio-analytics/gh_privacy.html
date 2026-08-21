@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Analytics Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --surface: #ffffff;
+    --border: #e4e1d8;
+    --text: #1c1b18;
+    --text-dim: #6b6558;
+    --accent: #b5762c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16140f; --surface: #1e1b15; --border: #332e23;
+      --text: #ece7db; --text-dim: #a99f8c; --accent: #e0a355;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16140f; --surface: #1e1b15; --border: #332e23;
+    --text: #ece7db; --text-dim: #a99f8c; --accent: #e0a355;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 72px 24px 100px; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12.5px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
+  }
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif; font-size: 34px; font-weight: 600;
+    letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance;
+  }
+  .updated { color: var(--text-dim); font-size: 14px; margin: 0 0 42px; }
+  h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 20px; font-weight: 600; margin: 42px 0 12px; }
+  p, li { font-size: 15.5px; color: var(--text); }
+  p { margin: 0 0 14px; max-width: 62ch; }
+  ul { padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 8px; max-width: 60ch; }
+  strong { font-weight: 600; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; margin: 20px 0; }
+  .card p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  .contact { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Studio Analytics — Privacy</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective 21 August 2026</p>
+
+  <p>Studio Analytics is a private, single-operator tool that reads publicly-available
+  TikTok account statistics (follower count, likes, video count and public video
+  metadata) through TikTok's official Login Kit, for two TikTok accounts the operator
+  owns: <strong>@UncoveredEmpires</strong> and <strong>@SiliconHours</strong>.</p>
+
+  <p>It is not a public product. It is not distributed, and no third party can connect
+  an account to it.</p>
+
+  <h2>What is accessed</h2>
+  <ul>
+    <li><strong>user.info.basic / user.info.stats</strong> — display name, avatar,
+    follower count, following count, likes count, video count.</li>
+    <li><strong>video.list</strong> — public video metadata: title, cover, view count,
+    like count, comment count, share count.</li>
+  </ul>
+
+  <h2>Where it goes</h2>
+  <div class="card">
+    <p>Everything read from the TikTok API is written to a SQLite database file on the
+    operator's own computer. Nothing is uploaded to a server, sold, shared with
+    advertisers, or used to train any model. The only place this data is displayed is
+    a local dashboard served on <code>127.0.0.1</code> — not reachable from outside
+    that machine.</p>
+  </div>
+
+  <h2>Retention</h2>
+  <p>Historical snapshots are kept indefinitely on the local machine so the operator
+  can chart growth over time. Older operational logs are purged automatically after
+  90–180 days; the analytics history itself is not.</p>
+
+  <h2>Revoking access</h2>
+  <p>Either account can revoke this app's access at any time from TikTok's own
+  settings — <strong>Settings → Security → Manage apps</strong> — which immediately
+  stops all data access with no action needed here.</p>
+
+  <p class="contact">Studio Analytics · operated by the account owner of
+  @UncoveredEmpires and @SiliconHours.</p>
+</div>
+</body>
+</html>
